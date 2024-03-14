@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  
+        <div class="content">
+        <form id="calculatorForm">
+        
+            <h2 style="text-align: left;">Pricing calculator</h2>
+            <hr>
+
+            
+            <h1 style="text-align: left;" class="bookings">How many bookings do you have per month?</h1>
+            <p >Provides insight into the volume and activity of financial transactions within the business</p>
+           
+              
+              <div class="bookings-grid">
+                <div class="booking-option" data-value="99.00">1-1000 <br> CHF 99.00/month</div>
+                <div class="booking-option" data-value="199.00">1001-2000 <br>CHF 199.00/month</div>
+                <div class="booking-option" data-value="299.00">2001-3000 <br> CHF 299.00/month</div>
+                <div class="booking-option" data-value="399.00">3001-4000 <br> CHF 399.00/month</div>
+                <div class="booking-option" data-value="499.00">4001-5000 <br> 499.00/month</div>
+                <div class="booking-option" data-value="899.00">Over 5001 <br> CHF 899.00/month</div>
+              </div>
+              <hr>
+
+
+              <div>
+                <h1 style="text-align: left;">Would you like to receive financial statements?</h1>
+                <p>You'll receive a balance sheet and a profit and loss statement.</p>
+                <div class="financial">
+                <div class="financial-option" data-value="Yes">Yes</div>
+                <div class="financial-option" data-value="No">No</div>
+              </div>
+
+
+              <hr>
+
+
+              <div>
+                <h1 style="text-align: left;">Are you required to report Value Added Tax (VAT)?</h1>
+                <p>Refers to the legal obligation of individuals or businesses to declare and remit Value Added Tax to tax authorities.</p>
+                <div class="Vat-grid">
+                    <div class="VAT-option" data-value="Yes">Yes</div>
+                    <div class="VAT-option" data-value="No">No</div>
+                </div>
+            </div>
+            
+            <div id="vatTypeQuestion" style="display: none;">
+                <h1 style="text-align: left;">What kind of VAT do you have?</h1>
+                <div class="vat2-grid">
+                    <div class="vat2-option" data-value="Quartal">Quartal</div>
+                    <div class="vat2-option" data-value="SSS">SSS</div>
+                </div>
+            </div>
+            
+           
+    <hr>
+      <div>
+            <h1 style="text-align: left;" class="tax">What type of tax return is required in your situation?</h1>
+            <p>The type of tax return required depends on various factors, including your personal or business situation, the tax jurisdiction you're in, and the types of income or transactions you're involved in.</p>
+          <div id="taxReturn" name="taxReturn">
+              <div class="taxreturn" data-value="Personal"><h3>Personal</h3>
+              <p>Individuals file this return to report income, deductions, and taxes owed. It covers wages, salaries, investments, self-employment earnings, and eligible deductions or credits.</p> </div>
+              <div class="taxreturn" data-value="Corporate or sole proprietorship"><h3>Corporate or sole proprietorship</h3>
+                <p>Businesses, including corporations, partnerships, and sole proprietorships, file corporate income tax returns to report their business income, expenses, and tax liability. </p>
+                
+              </div>
+           
+          </div>
+    
+           <div>
+            
+            <h1 style="text-align: left;" class="add-ons">Include add-ons</h1>
+            <p>Select add-ons for the</p>
+            <div class="add-ons-grid">
+            <div class="add-option" data-value="Digital-mailbox">
+                <h4>Digital-mailbox</h4>
+                <p>We convert your physical mail into digital formats that you can access anytime, anywhere. </p>
+                <h5 style="text-align: left;">CHF 49.00/month</h5>
+                <img width="200" src="Frame 2147223215.png" alt="">
+            </div>
+                <div class="add-option" data-value="Payroll accounting">
+                    <h4>Payroll accounting</h4>
+                    <p>We customize payroll services for accurate and timely employee compensation.</p>
+                    
+                    <h5 style="text-align: left;"s>CHF 39.00/employee/month</h5>
+                    <div id="payrollInputContainer" style="display: none;">
+                        <label for="numEmployees">Number of employees for payroll:</label>
+                        <input type="number" id="numEmployees" min="0" value="0">
+                    </div>
+    
+    
+                    <img width="200" src="Frame 2147223217.png" alt="">
+    
+                </div>
+                <div class="add-option" data-value="Onboarding">
+                    <h4>Onboarding</h4>
+                    <p>We'll assist in migrating your business onto our platform.
+                        For companies older than 1 year.</p>
+                        <h5 style="text-align: left;">CHF 199.00 one time.</h5>
+                        <img width="200" src="Frame 2147223220.png" alt="">
+                </div>
+            </div>
+           
+           
+              </div>
+              
+    
+            </form>
+            </div>
+
+            
+    <div class="summary-box">
+        <!-- <div style="border: solid 3px #EC5DA1; border-radius: 12px; padding: 30px;" class="summary-box"> -->
+            <h1 style="text-align: left;">Summary</h1>
+            <p>Here you will see the  price estimate for all the services you need.</p>
+            <div>
+                <p>
+                    <span style="font-weight: 500; font-size: 20px;" id="totalCost"
+                      >Your approximate monthly fee for the services you asked is <strong><span style="font-weight: 700;"> 0 CHF.</span></strong></span
+                    >
+                   
+                  </p>
+                </div>
+            <div class="button-container">
+             <a href="https://www.numarics.com/schedule-a-call">  <button style type="button" class="button" onclick="scheduleCall()">Schedule a Call</button></a> 
+              <a href=""> <button type="button" class="button1" onclick="comparePlans()">Compare Plans</button></a> 
+            </div>
+            
+        </div> 
+            
+
+
+
+   
+
+
+
+
+</body>
+  
+
+<script src="script.js"></script>
+
+</html>
+

@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  background-color: #f0f4ff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 0 186px;
+}
+.content {
+  max-width: calc(100% - 600px); /* Adjust the width as necessary */
+  padding: 20px;
+  display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: #FFF;
+}
+
+
+/* Improved responsiveness for the calculator form and summary box */
+.content-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+  justify-content: space-between;
+  width: 100%; /* Use full width to utilize space effectively */
+  max-width: 1200px; /* Max width to prevent excessive stretching on large screens */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.summary-box {
+  width: 280px; /* Adjust the width as necessary */
+  position: fixed; /* Fixed position to stay on scroll */
+  top: 20px;
+  right: 229px;
+  background-color: #f0f0f0; /* Background color, change as necessary */
+  height: fit-content;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+  overflow-y: auto; /* Enable scrolling within the box if content overflows */
+  z-index: 10; /* Ensure it's above other content */
+  display: flex;
+padding: 16px;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+align-self: stretch;
+border-radius: 12px;
+background: var(--Background-paper, #FFF);
+}
+
+#calculatorForm {
+  flex: 1 1 600px; /* Flex grow, flex shrink, and base width */
+  margin-right: 20px; /* Spacing between form and summary box */
+}
+
+
+/* Grid layout for booking and other options */
+.bookings-grid,
+.financial,
+.Vat-grid,
+.vat2-grid,
+#taxReturn,
+.add-ons-grid {
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.bookings-grid, .financial, .Vat-grid, .vat2-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+#taxReturn, .add-ons-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* General option styling */
+.booking-option,
+.financial-option,
+.VAT-option,
+.vat2-option,
+.taxreturn,
+.add-option {
+  background-color: #FAFAFA;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add-option input{
+  border: 1px solid #EC5DA1;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #calculatorForm {
+    margin-right: 0;
+    margin-bottom: 20px; /* Spacing between form and summary on small screens */
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Additional responsive adjustments */
+@media screen and (max-width: 600px) {
+  .bookings-grid, .financial, .Vat-grid, .vat2-grid, #taxReturn, .add-ons-grid {
+    grid-template-columns: 1fr; /* Stack options in a single column on very small screens */
+  }
+  body{
+    padding: 10px;
+  }
+}
+.button1 {
+display: flex;
+padding: 8px 12px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 12px;
+border: 1px solid var(--primary-main, #1A1A1A);
+color: var(--primary-main, #1A1A1A);
+background-color: #fff;
+
+
+/* Component typography/button/medium */
+font-family: Outfit;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: 0.14px;
+}
+.button {
+  display: flex;
+  padding: 8px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+background: var(--secondary-main, #EC5DA1);
+border-style: none;
+color: #fff;
+color: var(--secondary-contrast, #FFF);
+
+/* Component typography/button/medium */
+font-family: Outfit;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: 0.14px;
+}
+a{
+  text-decoration: none;
+}
+
+.button-container{
+  display: flex;
+  gap: 10px;
+}
+
+.selected input{
+  border: 1px solid #EC5DA1;
+  border-radius: 1px;
+}
+
+.selected {
+  color: rgb(0, 0, 0);
+  border: 2px solid #ec5da1;
+  padding: 10px;
+  border-radius: 12px;
+  transition: background-color 0.3s, color 0.3s;
+  
+
+  .booking-option:hover,
+  .financial-option:hover,
+  .VAT-option:hover,
+  .vat2-option:hover,
+  .taxreturn:hover,
+  .add-option:hover {
+    color: #000000;
+    cursor: pointer;
+  }
+
+  .selected:hover {
+    color: rgb(0, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+      max-width: 100%;
+  }
+  .summary-box {
+      position: static; /* Summary becomes part of the flow on smaller screens */
+      height: auto;
+      width: fit-content;
+      box-shadow: none;
+      border-radius: 16px;
+border: 3px solid var(--secondary-main, #EC5DA1);
+background: var(--secondary-selected, rgba(236, 93, 161, 0.08));
+  }
+}
